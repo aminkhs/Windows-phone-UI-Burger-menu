@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="BurgerSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BurgerSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Rectangle Fill="#FF0277BD" HorizontalAlignment="Left" Height="32" Margin="45,-29,-37,0" VerticalAlignment="Top" Width="392"/>
+        <Rectangle x:Name="SideBar" Fill="#FF0277BD" HorizontalAlignment="Left" Height="691" Margin="-256,-37,0,-14" VerticalAlignment="Top" Width="314"/>
+        <Rectangle x:Name="miniSideBar" Fill="#FF0277BD" HorizontalAlignment="Left" Height="691" Margin="-12,-37,0,-14" VerticalAlignment="Top" Width="70"/>
+        <Image x:Name="burgerbtn" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="35" Source="Assets/burger.png" Tapped="burgerbtn_Tapped"/>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Storyboard x:Name="RotateZRef"/>
+                <Storyboard x:Name="Movesb">
+                    <RepositionThemeAnimation 
+                        Storyboard.TargetName="SideBar"
+                        FromHorizontalOffset="100"
+                        AutoReverse="False"/>
+
+                </Storyboard>
+                <Storyboard x:Name="Hidesb">
+                    <RepositionThemeAnimation 
+                        Storyboard.TargetName="SideBar"
+                        FromHorizontalOffset="100"
+                        AutoReverse="False"/>
+                </Storyboard>
+            </StackPanel.Resources>
+        </StackPanel>
+    </Grid>
+</Page>
