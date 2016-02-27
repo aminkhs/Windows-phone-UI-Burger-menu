@@ -1,4 +1,4 @@
-# burgermenuwp
+# Burger Menu WP
 it's an app for windows phone 8.1 that allows you to use beautiful floating burger menu in windows phone 8.1!
 you can use this repo in your apps to create stunnig apps for windows phone
 
